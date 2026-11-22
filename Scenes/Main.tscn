@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://by1b16yt2m4se"]
+
+[ext_resource type="Script" uid="uid://m2pg4hxprn1q" path="res://Scripts/v_box_container.gd" id="1_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://rq4s441661e7" path="res://Scenes/Options/chance.tscn" id="2_v1gob"]
+[ext_resource type="PackedScene" uid="uid://bxc04i4na82qh" path="res://Scenes/Options/butin.tscn" id="3_jw32o"]
+[ext_resource type="PackedScene" uid="uid://ovo6r5gm82ut" path="res://Scenes/Options/points.tscn" id="4_50glp"]
+[ext_resource type="Script" uid="uid://bubuntmjlvkbk" path="res://Scripts/label.gd" id="5_vy5pj"]
+
+[node name="Main" type="VBoxContainer" unique_id=1130908456]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pbw6q")
+Chance = ExtResource("2_v1gob")
+Butin = ExtResource("3_jw32o")
+Points = ExtResource("4_50glp")
+
+[node name="Donnés" type="Label" parent="." unique_id=750064365]
+layout_mode = 2
+script = ExtResource("5_vy5pj")
+
+[node name="V" type="HBoxContainer" parent="." unique_id=1661405826]
+layout_mode = 2

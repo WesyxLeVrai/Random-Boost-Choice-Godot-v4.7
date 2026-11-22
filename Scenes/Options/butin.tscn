@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bxc04i4na82qh"]
+
+[ext_resource type="Script" uid="uid://bfn50avja2s8m" path="res://Scripts/options/butin.gd" id="1_qx0nq"]
+[ext_resource type="Texture2D" uid="uid://d257ffddlidy4" path="res://icon.svg" id="2_mvrcq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7tm4"]
+bg_color = Color(0.13755074, 0.13755059, 0.13755056, 1)
+border_width_left = 5
+border_width_top = 4
+border_width_right = 5
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_detail = 16
+
+[node name="Butin" type="VBoxContainer" unique_id=1608212116]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qx0nq")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=307766331]
+layout_mode = 2
+texture = ExtResource("2_mvrcq")
+
+[node name="Button" type="Button" parent="." unique_id=1012230689]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(0.49747348, 0.4974736, 0.4974746, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_p7tm4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p7tm4")
+text = "Take"
+
+[node name="description" type="Label" parent="." unique_id=951740249]
+layout_mode = 2
+text = "More Butin"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
